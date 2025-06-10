@@ -1,0 +1,233 @@
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Coiny", sans-serif;
+      background-color: #F5F5F0;
+      color: #2E2E2E;
+    }
+
+    header, footer {
+      background-color: #455A64;
+      color: #F8A627;
+      padding: 1rem;
+      text-align: center;
+    }
+    header > h1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .app-container {
+      max-width: 1200px;
+      margin: auto;
+             margin-top: 60px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .pos-abs{
+        position: absolute;
+    }
+    .text-cen{
+        text-align: center;
+    }
+
+
+
+
+    /* Brick intro */
+
+    .brick-intro{
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .brick-intro, .brick{
+             cursor: url('images/hammer.png') 16 16, auto;
+    } 
+.row {
+  display: flex;
+  background: transparent;
+}
+.row:first-child .brick {
+  margin-top: 4px;
+}
+.row:last-child .brick {
+  margin-bottom: 4px;
+}
+.row:nth-child(even) .brick:first-child {
+  display: none;
+}
+.row:nth-child(even) .brick:last-child {
+  margin-right: 2px;
+}
+.row:nth-child(even)::before,
+.row:nth-child(even)::after {
+  position: absolute;
+  content: "";
+  background: #bd5858;
+  width: calc(15%/2);
+  height: 3vw;
+  border-radius: 2px;
+  margin: 2px;
+  box-shadow: 0 0 19px 1px #7d3232 inset;
+}
+.row:nth-child(even)::before {
+  margin-left: 4px;
+  left: 0;
+}
+.row:nth-child(even)::after {
+  margin-right: 4px;
+  right: 0;
+}
+.brick {
+  background: #bd5858;
+  width: 15%;
+  height: 3vw;
+  border-radius: 2px;
+  margin: 2px;
+  box-shadow: 0 0 19px 1px #7d3232 inset;
+}
+.brick:last-child {
+  margin-right: 4px;
+}
+.brick:first-child {
+  margin-left: 4px;
+}
+
+
+
+
+/* Main Content */
+
+    .kothanaar-wrap{
+              background: #f5f5f5;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #FFF8E1;
+      border: 2px dashed #ccc;
+      border-radius: 20px;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: rotate(-1deg) scale(1.02);
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: #222;
+    }
+
+    .nickname {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .fact {
+      font-size: 0.85rem;
+      margin: 5px 0;
+      line-height: 1.4;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #F8A627;
+      color: #5d4037;
+      padding: 2px 8px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      margin-top: 10px;
+    }
+
+.card {
+  background: #FFF8E1;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border: 2px dashed #F8A627;
+}
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #2E2E2E;
+}
+.card em {
+  display: block;
+  font-size: 0.95rem;
+  color: #757575;
+  margin-bottom: 1rem;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+.card ul li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+.badge {
+  display: inline-block;
+  background: #FFD54F;
+  color: #4E342E;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.floating-info{
+    position: absolute;
+    bottom: 45px;
+    left: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #FFD54F;
+    border: 1px solid #4E342E;
+    color: #4E342E;
+    width: 200px;
+    height: 200px;
+    font-family: monospace;
+    animation: jumping 2000ms infinite forwards;
+    rotate: -25deg;
+}
+
+@keyframes jumping{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
