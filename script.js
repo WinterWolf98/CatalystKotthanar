@@ -50,7 +50,7 @@ $('.brick').on('click', function() {
         });
               flag ++;
 
-      if (flag == 18){
+      if (flag == 8){
             $('.brick-intro').animate({
                  top: windowHeight + 200 // move out of view
             }, 800, 'easeInQuad', function () {
