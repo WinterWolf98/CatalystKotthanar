@@ -54,9 +54,12 @@ $('.brick').on('click', function() {
             $('.brick-intro').animate({
                  top: windowHeight + 200 // move out of view
             }, 800, 'easeInQuad', function () {
-        // Optional: remove or reset
-        $(this).hide();
-      });
+                // Optional: remove or reset
+                $(this).hide();
+                const unmuteIcon = document.querySelector('.unmute-icon');
+                unmuteIcon.classList.remove('unmute-icon');
+                unmuteIcon.classList.add('hidden');
+            });
       }
     });
 });
