@@ -1,2 +1,4 @@
 .catalyst
 client-package.json
+.DS_Store
+*.log
